@@ -12,6 +12,7 @@
 本服務所用之開放資料皆來自中央氣象署[氣象資料開放平台](https://opendata.cwa.gov.tw/index)，資料條列如下：
 
 - 1小時雨量預測-QPESUMS 1小時定量降雨預報格點資料: https://opendata.cwa.gov.tw/dataset/forecast/F-B0046-001
+    - 請先登入氣象會員之後，將檔案下載處的 JSON 檔案連結 url 複製到 api.json 內取代 YOUR_API_LINK
 
 - 降雨雷達-樹林雷達回波圖
     - json: https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/O-A0084-001?Authorization=CWA-EAC5F54B-AD17-4E60-8715-38C2490AED66&downloadType=WEB&format=JSON
