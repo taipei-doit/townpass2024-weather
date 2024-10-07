@@ -15,11 +15,8 @@
     - 請先登入氣象會員之後，將檔案下載處的 JSON 檔案連結 url 複製到 api.json 內取代 YOUR_API_LINK
 
 - 降雨雷達-樹林雷達回波圖
-    - json: https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/O-A0084-001?Authorization=CWA-EAC5F54B-AD17-4E60-8715-38C2490AED66&downloadType=WEB&format=JSON
     - imgurl: https://cwaopendata.s3.ap-northeast-1.amazonaws.com/Observation/O-A0084-001.png
 - 降雨雷達-南屯雷達回波圖
-    - json: https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/O-A0084-002?Authorization=CWA-EAC5F54B-AD17-4E60-8715-38C2490AED66&downloadType=WEB&format=JSON
     - imgurl: https://cwaopendata.s3.ap-northeast-1.amazonaws.com/Observation/O-A0084-002.png
 - 雷達整合回波圖-臺灣
-    - json: https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/O-A0058-003?Authorization=CWA-EAC5F54B-AD17-4E60-8715-38C2490AED66&downloadType=WEB&format=JSON
     - imgurl: https://cwaopendata.s3.ap-northeast-1.amazonaws.com/Observation/O-A0058-003.png
