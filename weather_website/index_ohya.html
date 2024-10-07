@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>降雨報報</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2><center>降雨報報</center></h2>
+
+    <p>顯示 
+      <input type="radio" id="currentLocation" name="locationOption" value="current" checked>
+      <label for="currentLocation">所在地</label>
+      
+      <input type="radio" id="customLocation" name="locationOption" value="custom">
+      <label for="customLocation">自選地點</label>
+      
+      的降雨預報
+    </p>
+    
+    <!-- "輸入地址" 和 "搜尋"按鈕 initially hidden -->
+    <div id="customAddressSection" style="display: none;">
+      <input type="text" id="addressInput" placeholder="輸入地址">
+      <button onclick="searchAddress()">搜尋</button>
+    </div>
+    <br>
+  
+    <!-- Dropdown to select radar overlay -->
+    <label for="radarSelector">選擇雷達覆蓋圖：</label>
+    <select id="radarSelector">
+      <option value="shulin">樹林雷達</option>
+      <option value="nantun">南屯雷達</option>
+      <option value="combined">整合雷達圖</option>
+    </select>
+  
+    <br>
+    <!-- The map container -->
+    <div id="map"></div>
+    
+    <!-- Checkbox to toggle radar overlay -->
+    <input type="checkbox" id="toggleOverlay" checked>
+    <label for="toggleOverlay">顯示雷達回波圖</label>
+  
+    <!-- Slider to control radar overlay opacity -->
+    <input type="range" id="overlayOpacity" min="0" max="100" value="80">
+    <label for="overlayOpacity">不透明度</label>
+  
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+  
+  </body>
+  
+
+
+</html>

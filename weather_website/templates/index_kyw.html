@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainfall Grid Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <style>
+        #map { height: 500px; width: 100%; }
+        #timestamp { margin-top: 10px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div id="timestamp">Loading data...</div> <!-- 顯示時間戳的位置 -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
