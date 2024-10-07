@@ -47,6 +47,13 @@ def get_rainfall_data():
     # print("end python")
     return jsonify(data)
 
+@app.route('/rainfall_data', methods=['GET'])
+def get_rainfall_data():
+    with open("api.json", "r", encoding='utf-8') as api:
+        fn = json.load(api)
+        url = fn["F-B0046-001"]
+    return 
+
 def fetch_new_data(url):
     try:
         response = requests.get(url)

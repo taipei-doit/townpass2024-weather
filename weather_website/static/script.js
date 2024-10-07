@@ -24,21 +24,18 @@ const radarData = {
     stationLat: 24.993,
     stationLon: 121.40070,
     radiusKm: 150,
-    imageBounds: calculateBounds(24.993, 121.40070, 150),
-    jsonUrl: "https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/O-A0084-001?Authorization=CWA-EAC5F54B-AD17-4E60-8715-38C2490AED66&downloadType=WEB&format=JSON" // JSON URL for radar
+    imageBounds: calculateBounds(24.993, 121.40070, 150)
   },
   nantun: {
     imageUrl: "https://cwaopendata.s3.ap-northeast-1.amazonaws.com/Observation/O-A0084-002.png",
     stationLat: 24.135,
     stationLon: 120.585,
     radiusKm: 150,
-    imageBounds: calculateBounds(24.135, 120.585, 150),
-    jsonUrl: "https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/O-A0084-002?Authorization=CWA-EAC5F54B-AD17-4E60-8715-38C2490AED66&downloadType=WEB&format=JSON" // JSON URL for radar
+    imageBounds: calculateBounds(24.135, 120.585, 150)
   },
   combined: {
     imageUrl: "https://cwaopendata.s3.ap-northeast-1.amazonaws.com/Observation/O-A0058-003.png",
-    imageBounds: [[20.48, 118.01], [26.48, 124.0]],
-    jsonUrl: "https://opendata.cwa.gov.tw/fileapi/v1/opendataapi/O-A0058-003?Authorization=CWA-EAC5F54B-AD17-4E60-8715-38C2490AED66&downloadType=WEB&format=JSON" // JSON URL for radar
+    imageBounds: [[20.48, 118.01], [26.48, 124.0]]
   }
 };
 
@@ -175,22 +172,6 @@ function displayWeatherOverlay() {
     overlay = L.imageOverlay(radarInfo.imageUrl, radarInfo.imageBounds, { opacity: 0.8 }).addTo(map);
   }
 
-  // Fetch the radar JSON to get the DateTime
-  fetch(radarInfo.jsonUrl)
-    .then(response => response.json())
-    .then(data => {
-      if (data && data.cwaopendata && data.cwaopendata.dataset && data.cwaopendata.dataset.DateTime) {
-        const dateTime = data.cwaopendata.dataset.DateTime;
-        console.log('Radar DateTime:', dateTime);
-        var time_element = document.getElementById('update-time');
-        time_element.innerText = '更新時間: ' + dateTime;
-      } else {
-        console.error('DateTime not found in the JSON response');
-      }
-    })
-    .catch(error => {
-      console.error('Error fetching radar JSON:', error);
-    });
 }
 
 // Clear radar overlay
