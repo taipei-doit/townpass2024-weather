@@ -1,3 +1,8 @@
-numpy==2.1.1
-flask==3.0.3
-requests==2.32.3
+Flask
+Flask-WTF
+flask-talisman
+markupsafe
+numpy==1.21.6
+Flask-SeaSurf
+flask-session
+requests
